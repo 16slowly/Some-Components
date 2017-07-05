@@ -11,7 +11,7 @@ function Carousel(images, showDots, showArrows, delays, isLock) {
   this.SpicWidth = null;
   this.SpicLength = images.length;
   this.$imagesUl = $("<ul class='carousel-ul'></ul>");
-  this.$dots = $("<ul class='dot-ul'></ul>");
+  this.$dots = $("<ul class='carousel-dot-ul'></ul>");
 
   this.init();
   this.autoPlay();
@@ -30,7 +30,7 @@ Carousel.prototype = {
 
       // 生成dots
       if (_this.showDots) {
-        var $dotLi = $('<li></li>');
+        var $dotLi = $("<li class='carousel-dot-li'></li>");
         _this.$dots.append($dotLi);
       }
     });
@@ -47,9 +47,9 @@ Carousel.prototype = {
     this.$imagesUl.append(this.$prevArrow);
     this.$imagesUl.append(this.$nextArrow);
 
+    console.log('imagesUl width', this.$imagesUl.width());
     this.SpicWidth = this.$imagesUl.children().width();
     this.totalWith = this.SpicWidth * this.SpicLength;
-    this.$imagesUl.width(this.totalWith);
 
     this.bind();
 

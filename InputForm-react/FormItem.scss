@@ -1,0 +1,57 @@
+.label {
+  display: inline-block;
+  min-width: 90px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.input {
+  min-width: 200px;
+  height: 32px;
+  color: #fff;
+  background-color: transparent;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  overflow: visible;
+}
+
+.input:focus {
+  border-color: #28dfff;
+}
+
+.hightLight {
+  border-color: #f6a623;
+}
+
+.fileField {
+  display: flex;
+  align-items: center;
+}
+
+
+.selectFileButton {
+  width: 100px;
+  height: 32px;
+  color: rgba(204, 204, 204, 1);
+  box-sizing: border-box;
+  line-height: 32px;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 26px;
+
+  input {
+    display: none;
+  }
+}
+
+.selectFileButton:hover {
+  color: #fff;
+  cursor: pointer;
+}
