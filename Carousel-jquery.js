@@ -7,14 +7,23 @@ function Carousel(images, showDots, showArrows, delays, isLock) {
   this.showDots = showDots && true;
   this.showArrows = showArrows;
   this.delays = delays || 1000;
+<<<<<<< HEAD
   this.isLock = false || isLock;
+=======
+>>>>>>> 960364c5f73ad752858fd63ef3281ba66196ce25
   this.lock = false;
   this.mark = 0;
   this.picWidth = null;
   this.picsLength = images.length;
+<<<<<<< HEAD
   this.$carousel = $(document).find('#carousel');
   this.$imagesUl = $('<ul></ul>');
   this.$dots = $('<ul></ul>');
+=======
+  this.$carousel = $(document).find("#carousel");
+  this.$imagesUl = $("<ul></ul>");
+  this.$dots = $("<ul></ul>");
+>>>>>>> 960364c5f73ad752858fd63ef3281ba66196ce25
 
   this.init();
   this.autoPlay();
@@ -26,7 +35,11 @@ Carousel.prototype = {
     var _this = this;
 
     // 生成图片列表
+<<<<<<< HEAD
     this.images.forEach(function(image, index) {
+=======
+    this.images.forEach(image => {
+>>>>>>> 960364c5f73ad752858fd63ef3281ba66196ce25
       // 给li添加外部样式来定义他的宽，父级ul将获取不到他的宽
       // 加载代码时，并未进行绘制，参阅 http://taligarsiel.com/Projects/howbrowserswork1.htm
       // 缺点1：写成行内样式
@@ -45,14 +58,22 @@ Carousel.prototype = {
 
       // 生成 dots
       if (_this.showDots) {
+<<<<<<< HEAD
         var $dotLi = $('<li></li>');
         $dotLi.attr('title', '图片' + (index + 1));
+=======
+        var $dotLi = $("<li></li>");
+>>>>>>> 960364c5f73ad752858fd63ef3281ba66196ce25
         _this.$dots.append($dotLi);
       }
     });
 
+<<<<<<< HEAD
     this.$dots.children().eq(0).addClass('active');
     this.$dots.addClass('carousel-dot-ul');
+=======
+    this.$dots.children().eq(0).addClass("active");
+>>>>>>> 960364c5f73ad752858fd63ef3281ba66196ce25
     this.$carousel.append(this.$dots);
 
     // 生成左右箭头
