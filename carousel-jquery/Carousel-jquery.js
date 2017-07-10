@@ -6,7 +6,7 @@ function Carousel(images, showDots, showArrows, delays, isLock) {
   this.images = images;
   this.showDots = showDots && true;
   this.showArrows = showArrows;
-  this.delays = delays || 1000;
+  this.delays = delays || 3000;
   this.isLock = false || isLock;
   this.lock = false;
   this.mark = 0;
@@ -68,7 +68,7 @@ Carousel.prototype = {
       this.$carousel.append(this.$nextArrow);
     }
 
-    // 复制列表头部及尾部，保证衔接顺滑
+    // 复制列表头部及尾部，保证无缝衔接
     // 缺点2：需要维护多余节点
     var $picFirst = this.$imagesUl.children().eq(0).clone();
     var $picLast = this.$imagesUl.children().eq(this.picsLength - 1).clone();
@@ -163,7 +163,7 @@ Carousel.prototype = {
           _this.mark--;
           console.log('mark', _this.mark);
           if (_this.mark < 0) {
-            // 回到列表首个
+            // 回到列表首页
             _this.$imagesUl.css('left', -_this.totalWith + 1000);
             _this.mark = _this.picsLength - 1;
           }
